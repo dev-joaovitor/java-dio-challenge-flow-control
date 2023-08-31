@@ -3,9 +3,9 @@ public class Counter {
     public static void main(String[] args) {
         Scanner terminal = new Scanner(System.in);
         System.out.println("Enter the lower number");
-        int lowerNumber = terminal.nextInt();
+        final int lowerNumber = terminal.nextInt();
         System.out.println("\nEnter the higher number");
-        int highestNumber = terminal.nextInt();
+        final int highestNumber = terminal.nextInt();
 
         try {
             count(lowerNumber, highestNumber);
@@ -24,8 +24,8 @@ public class Counter {
      * @return void
      */
     static void count(int lowNum, int highNum) throws InvalidParamsException {
-        int maxCount = highNum - lowNum;
-        int maxNumberAllowed = 500;
+        final int maxCount = highNum - lowNum;
+        final int maxNumberAllowed = 500;
 
         System.out.println("\nCount number > " + maxCount + "\n");
 
